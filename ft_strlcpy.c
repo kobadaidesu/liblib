@@ -17,7 +17,7 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
 	return ft_strlen(src);
 }
 
-int main(void)
-{
+// int main(void)
+// {
 
-}
+// }
