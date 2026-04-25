@@ -1,7 +1,7 @@
 #include <stddef.h>
 #include "libft.h"
 
-void ft_memcpy(voiddest, const void src, size_t n)
+void ft_memcpy(voiddest, const  void src, size_t n)
 {
     size_t    i;
     unsigned chard;
