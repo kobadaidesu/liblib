@@ -3,7 +3,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
     size_t i;
-    
+
     i = 0;
     while(i < n)
     {
@@ -17,14 +17,15 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
-	printf("%d\n", ft_strncmp("abc", "abc", 3));
-	printf("%d\n", ft_strncmp("abc", "abd", 3));
-	printf("%d\n", ft_strncmp("abd", "abc", 3));
-	printf("%d\n", ft_strncmp("abc", "abd", 2));
-	printf("%d\n", ft_strncmp("abc", "xyz", 0));
-	printf("%d\n", ft_strncmp("abc", "abcd", 4));
+	printf("%d\n", strncmp("abe", "abc", 3));
+	printf("%d\n", strncmp("abc", "abd", 3));
+	printf("%d\n", strncmp("abd", "abc", 3));
+	printf("%d\n", strncmp("abc", "abd", 2));
+	printf("%d\n", strncmp("abc", "xyz", 3));
+	printf("%d\n", strncmp("abc", "abcd", 4));
 	return (0);
 }

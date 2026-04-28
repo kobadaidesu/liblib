@@ -20,11 +20,10 @@ void *ft_memmove(void *dest, const void *src, size_t n)
         }
         else
         {
-                i = 0;
-                while (n--)
-                        d[i] = s[i];
-        }
-        return (dest);
+			i = 0;
+			while (n--)
+				d[i] = s[i];
+        }        return (dest);
 }
 
 int main(void)
