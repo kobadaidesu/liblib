@@ -9,19 +9,16 @@ void ft_lstadd_front(t_list **lst, t_list *new)
     *lst = new;
 }
 
-int main(void)
-{
-    t_list *lst = NULL;
-
-    ft_lstadd_front(&lst, ft_lstnew("A"));
-    ft_lstadd_front(&lst, ft_lstnew("B"));
-    ft_lstadd_front(&lst, ft_lstnew("C"));
-
-    //t_list *tmp = lst;
-    while (lst)
-    {
-        printf("[%s]\n", (char *)lst->content);
-        lst = lst->next;
-    }
-    return 0;
-}
+// int main(void)
+// {
+//     t_list *lst = NULL;
+//     ft_lstadd_front(&lst, ft_lstnew("A"));
+//     ft_lstadd_front(&lst, ft_lstnew("B"));
+//     ft_lstadd_front(&lst, ft_lstnew("C"));
+//     while (lst)
+//     {
+//         printf("[%s]\n", (char *)lst->content);
+//         lst = lst->next;
+//     }
+//     return 0;
+// }

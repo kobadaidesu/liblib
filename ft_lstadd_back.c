@@ -15,29 +15,29 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 	last->next = new;
 }
 
-int main(void)
-{
-	t_list *lst;
-	t_list *node1;
-	t_list *node2;
-	t_list *node3;
-	t_list *tmp;
-
-	node1 = ft_lstnew("");
-	node2 = ft_lstnew("");
-	node3 = ft_lstnew("");
-
-	lst = NULL;
-	ft_lstadd_back(&lst, node1);
-	ft_lstadd_back(&lst, node2);
-	ft_lstadd_back(&lst, node3);
-
-	tmp = lst;
-	while (tmp)
-	{
-		printf("%s -> ", (char *)tmp->content);
-		tmp = tmp->next;
-	}
-	printf("NULL\n");
-	return (0);
-}
+// int main(void)
+// {
+// 	t_list *lst;
+// 	t_list *node1;
+// 	t_list *node2;
+// 	t_list *node3;
+// 	t_list *tmp;
+//
+// 	node1 = ft_lstnew("");
+// 	node2 = ft_lstnew("");
+// 	node3 = ft_lstnew("");
+//
+// 	lst = NULL;
+// 	ft_lstadd_back(&lst, node1);
+// 	ft_lstadd_back(&lst, node2);
+// 	ft_lstadd_back(&lst, node3);
+//
+// 	tmp = lst;
+// 	while (tmp)
+// 	{
+// 		printf("%s -> ", (char *)tmp->content);
+// 		tmp = tmp->next;
+// 	}
+// 	printf("NULL\n");
+// 	return (0);
+// }

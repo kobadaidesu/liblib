@@ -21,7 +21,7 @@ char *ft_strdup(const char *s)
     return ptr;
 }
 
-int main(void)
-{
-    printf("%s", ft_strdup("aiueo"));
-}
+// int main(void)
+// {
+//     printf("%s", ft_strdup("aiueo"));
+// }

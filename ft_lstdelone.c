@@ -2,14 +2,19 @@
 
 void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	void *c;
-
+	if(!del || !lst)
+		return ;
+	del(lst->content);
 	free(lst);
-	del(void* c);
-
 }
 
-void del(void*c)
-{
-__is_identifier
-}
+// void del(void *content)
+// {
+// 	free(content);
+// }
+
+// int main(void)
+// {
+// 	t_list *node = ft_lstnew(malloc(10));
+// 	ft_lstdelone(node, del);
+// }
