@@ -25,9 +25,11 @@ char	**ft_split(char const *s, char c)
 	size_t	word_len;
 	int		i;
 
+	if (!s)
+		return (NULL);
 	lst = (char **)malloc((ft_countword(s, c) + 1) * sizeof(char *));
-	if (!s || !lst)
-		return (0);
+	if (!lst)
+		return (NULL);
 	i = 0;
 	while (*s)
 	{
