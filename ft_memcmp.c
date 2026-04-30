@@ -20,8 +20,17 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-    printf("%d\n", ft_memcmp("aaa", "aaa", 3));
-    printf("%d\n", ft_memcmp("aa", "aaa", 3));
+	unsigned char	a[4] = {1, 2, 3, 4};
+	unsigned char	b[4] = {1, 2, 3, 5};
+	unsigned char	c[4] = {1, 2, 3, 4};
+
+	printf("a == c: %d\n", ft_memcmp(a, c, 4));
+	printf("a <  b: %d\n", ft_memcmp(a, b, 4));
+	printf("b >  a: %d\n", ft_memcmp(b, a, 4));
+	printf("n=0:    %d\n", ft_memcmp(a, b, 0));
+	printf("3byte:  %d\n", ft_memcmp(a, b, 3));
+
+	return (0);
 }

@@ -1,27 +1,41 @@
-#include <stddef.h>
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memset(void *s, int c, size_t n)
 {
 	size_t i;
-	unsigned char *ss;
+	unsigned char *ptr;
 
-	ss = (unsigned char *)s;
+	ptr = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		ss[i] = (unsigned char)c;
+		ptr[i] = (unsigned char)c;
 		i++;
 	}
 	return s;
 }
 
-//int main(void)
-//{
-//	char str[] = "aaaaaiiiiii";
+static void	print_bytes(unsigned char *p, size_t n)
+{
+	size_t	i = 0;
 
-//	ft_memset(str, '5', 5);
-//	printf("%s\n", str);
+	while (i < n)
+	{
+		printf("%3u ", p[i]);
+		i++;
+	}
+	printf("\n");
+}
 
-//	return 0;
-//}
+int	main(void)
+{
+	unsigned char	buf[8] = {'a', 'b', 0, 'c', 'd', 0, 'e', 'f'};
+
+	print_bytes(buf, 8);
+
+	ft_memset(buf, 'X', 8);
+
+	print_bytes(buf, 8);
+
+	return (0);
+}

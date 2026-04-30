@@ -11,21 +11,6 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
     }
 }
 
-void f_toupper(void *content)
-{
-    char *str = (char *)content;
-    int i = 0;
-    while (str[i])
-    {
-        str[i] = ft_toupper(str[i]);
-        i++;
-    }
-}
-
-void f_print(void *content)
-{
-    ft_printf("%s\n", (char *)content);
-}
 
 // int main(void)
 // {

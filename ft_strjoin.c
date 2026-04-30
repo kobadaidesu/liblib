@@ -3,7 +3,6 @@
 char *ft_strjoin(char const *s1, char const *s2)
 {
     char *new_str;
-    size_t len;
     size_t i;
     size_t j;
     size_t len1;
