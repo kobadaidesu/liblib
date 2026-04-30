@@ -21,9 +21,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-int main(void)
-{
-    char big[11] = "aiueoaiueo";
-    char little[11] = "oaiueo"; 
-    printf("%s", strnstr(big, little, 5));
-}
+// int main(void)
+// {
+//     char big[11] = "aiueoaiueo";
+//     char little[11] = "oaiueo";
+//     printf("%s", ft_strnstr(big, little, 5));
+// }

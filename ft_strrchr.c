@@ -13,3 +13,11 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strrchr("hello", 'l'));
+// 	printf("%s\n", ft_strrchr("hello", 'h'));
+// 	printf("%p\n", (void *)ft_strrchr("hello", 'z'));
+// 	printf("%s\n", ft_strrchr("hello", '\0'));
+// }

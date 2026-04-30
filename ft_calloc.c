@@ -16,3 +16,18 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, total);
 	return (ptr);
 }
+
+// int	main(void)
+// {
+// 	int	*arr;
+// 	int	i;
+//
+// 	arr = (int *)ft_calloc(5, sizeof(int));
+// 	i = 0;
+// 	while (i < 5)
+// 		printf("%d ", arr[i++]);
+// 	printf("\n");
+// 	free(arr);
+// 	printf("nmemb=0: %p\n", ft_calloc(0, 4));
+// 	printf("overflow: %p\n", ft_calloc((size_t)-1, 2));
+// }

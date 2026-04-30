@@ -41,3 +41,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[i] = '\0';
 	return (trimmed);
 }
+
+// int	main(void)
+// {
+// 	printf("[%s]\n", ft_strtrim("  hello  ", " "));
+// 	printf("[%s]\n", ft_strtrim("xxhelloxx", "x"));
+// 	printf("[%s]\n", ft_strtrim("hello", "x"));
+// 	printf("[%s]\n", ft_strtrim("xxxxx", "x"));
+// }

@@ -1,18 +1,4 @@
-#include <stddef.h>
-#include <stdio.h>
-
-static void	print_bytes(unsigned char *p, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		printf("%3u ", p[i]);
-		i++;
-	}
-	printf("\n");
-}
+#include "libft.h"
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -40,6 +26,19 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 				i++;
 			}
         }        return (dest);
+}
+
+static void	print_bytes(unsigned char *p, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		printf("%2u ", p[i]);
+		i++;
+	}
+	printf("\n");
 }
 
 int	main(void)

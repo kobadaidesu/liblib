@@ -1,4 +1,4 @@
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -24,3 +24,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
+
+// int	main(void)
+// {
+// 	printf("%d\n", ft_atoi("42"));
+// 	printf("%d\n", ft_atoi("  -42"));
+// 	printf("%d\n", ft_atoi("+100abc"));
+// 	printf("%d\n", ft_atoi("0"));
+// }
