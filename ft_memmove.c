@@ -1,62 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kobadai <kobadai@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/06 00:00:00 by dakobaya          #+#    #+#             */
+/*   Updated: 2026/05/06 03:28:00 by kobadai          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-        unsigned char	*d;
-        const unsigned char	*s;
-        size_t i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-        d = (unsigned char *)dest;
-        s = (const unsigned char *)src;
-
-        if (d > s)
-        {
-                while (n > 0)
-                {
-                        n--;
-                        d[n] = s[n];
-                }
-        }
-        else
-        {
-			i = 0;
-			while (n--)
-			{
-				d[i] = s[i];
-				i++;
-			}
-        }        return (dest);
-}
-
-static void	print_bytes(unsigned char *p, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
+	if (!dest && !src)
+		return (dest);
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (d > s)
 	{
-		printf("%2u ", p[i]);
-		i++;
+		while (n > 0)
+		{
+			n--;
+			d[n] = s[n];
+		}
 	}
-	printf("\n");
-}
-
-int	main(void)
-{
-	unsigned char	buf1[8] = {1, 2, 3, 4, 5, 6, 7, 8};
-	unsigned char	buf2[8] = {1, 2, 3, 4, 5, 6, 7, 8};
-	unsigned char	buf3[8] = {1, 2, 3, 4, 5, 6, 7, 8};
-
-	printf("before:          "); print_bytes(buf1, 8);
-
-	ft_memmove(buf1, buf1 + 2, 5);
-	printf("dest<src overlap:"); print_bytes(buf1, 8);
-
-	ft_memmove(buf2 + 2, buf2, 5);
-	printf("dest>src overlap:"); print_bytes(buf2, 8);
-
-	ft_memmove(buf3, buf3, 0);
-	printf("n=0 (no change): "); print_bytes(buf3, 8);
-
-	return (0);
+	else
+	{
+		while (n--)
+			*d++ = *s++;
+	}
+	return (dest);
 }

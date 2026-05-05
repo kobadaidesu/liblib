@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/* ft_split.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dakobaya <dakobaya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                  +#+#+#+#+#+   +#+         */
+/*   Created: 2026/05/06 00:00:00 by dakobaya        #+#    #+#               */
+/*   Updated: 2026/05/06 00:00:00 by dakobaya        ###   ########.fr        */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
 static size_t	ft_countword(char const *s, char c)
@@ -19,17 +30,27 @@ static size_t	ft_countword(char const *s, char c)
 	return (count);
 }
 
-static void	ft_free_result(char **result, int n)
+static size_t	get_word_len(char const *s, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	return (len);
+}
+
+static void	*ft_free_result(char **result, int n)
 {
 	while (n > 0)
 		free(result[--n]);
 	free(result);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	size_t	word_len;
 	int		i;
 
 	if (!s)
@@ -40,40 +61,16 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	while (*s)
 	{
-		while (*s == c && *s)
+		while (*s == c)
 			s++;
-		if (*s)
-		{
-			if (!ft_strchr(s, c))
-				word_len = ft_strlen(s);
-			else
-				word_len = ft_strchr(s, c) - s;
-			result[i] = ft_substr(s, 0, word_len);
-			if (!result[i])
-			{
-				ft_free_result(result, i);
-				return (NULL);
-			}
-			i++;
-			s += word_len;
-		}
+		if (!*s)
+			break ;
+		result[i] = ft_substr(s, 0, get_word_len(s, c));
+		if (!result[i])
+			return (ft_free_result(result, i));
+		s += ft_strlen(result[i]);
+		i++;
 	}
 	result[i] = NULL;
 	return (result);
 }
-
-// int	main(void)
-// {
-// 	char	**res;
-// 	int		i;
-//
-// 	res = ft_split("hello world foo", ' ');
-// 	i = 0;
-// 	while (res[i])
-// 		printf("[%s]\n", res[i++]);
-// 	printf("---\n");
-// 	res = ft_split(",,a,,b,,", ',');
-// 	i = 0;
-// 	while (res[i])
-// 		printf("[%s]\n", res[i++]);
-// }

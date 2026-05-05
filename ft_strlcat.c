@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/* ft_strlcat.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dakobaya <dakobaya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                  +#+#+#+#+#+   +#+         */
+/*   Created: 2026/05/06 00:00:00 by dakobaya        #+#    #+#               */
+/*   Updated: 2026/05/06 00:00:00 by dakobaya        ###   ########.fr        */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t dst_len;
-	size_t src_len;
-	size_t i;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
 
 	dst_len = 0;
 	while (dst_len < size && dst[dst_len] != '\0')
@@ -21,44 +32,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (dst_len < size)
 		dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-	char	dst[20];
-	size_t	ret;
-
-	// size=0: 戻り値=srclen(dstは触らない)
-	ft_strlcpy(dst, "Hello", sizeof(dst));
-	ret = ft_strlcat(dst, " World", 0);
-	printf("test1: dst=\"%s\" ret=%zu (expect: dst=\"Hello\" ret=6)\n", dst, ret);
-
-	// size=1: dstが"\0"のみ扱い、何も追記されない、戻り値=strlen(dst)+strlen(src)=0+5
-	dst[0] = '\0';
-	ret = ft_strlcat(dst, "Hello", 1);
-	printf("test2: dst=\"%s\" ret=%zu (expect: dst=\"\" ret=5)\n", dst, ret);
-
-	// size=dstlen: 追記不可、戻り値=size+srclen
-	ft_strlcpy(dst, "Hello", sizeof(dst));
-	ret = ft_strlcat(dst, " World", 5);
-	printf("test3: dst=\"%s\" ret=%zu (expect: dst=\"Hello\" ret=11)\n", dst, ret);
-
-	// size=dstlen+1: NULしか入らない、1文字も追記されない
-	ft_strlcpy(dst, "Hello", sizeof(dst));
-	ret = ft_strlcat(dst, " World", 6);
-	printf("test4: dst=\"%s\" ret=%zu (expect: dst=\"Hello\" ret=11)\n", dst, ret);
-
-	// size=dstlen+2: 1文字だけ追記
-	ft_strlcpy(dst, "Hello", sizeof(dst));
-	ret = ft_strlcat(dst, " World", 7);
-	printf("test5: dst=\"%s\" ret=%zu (expect: dst=\"Hello \" ret=11)\n", dst, ret);
-
-	// 通常: 全部入る
-	ft_strlcpy(dst, "Hello", sizeof(dst));
-	ret = ft_strlcat(dst, " World", sizeof(dst));
-	printf("test6: dst=\"%s\" ret=%zu (expect: dst=\"Hello World\" ret=11)\n", dst, ret);
-
-	return (0);
 }

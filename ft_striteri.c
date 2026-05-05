@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/* ft_striteri.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dakobaya <dakobaya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                  +#+#+#+#+#+   +#+         */
+/*   Created: 2026/05/06 00:00:00 by dakobaya        #+#    #+#               */
+/*   Updated: 2026/05/06 00:00:00 by dakobaya        ###   ########.fr        */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
@@ -9,23 +20,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-        f(i, &s[i]);
+		f(i, &s[i]);
 		i++;
 	}
-}
-
-void	to_upper_iter(unsigned int i, char *c)
-{
-	(void)i;
-	if (*c >= 'a' && *c <= 'z')
-		*c = *c - 32;
-}
-
-int	main(void)
-{
-	char	str[] = "hello";
-
-	ft_striteri(str, to_upper_iter);
-	printf("%s\n", str);
-	return (0);
 }

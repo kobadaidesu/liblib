@@ -1,4 +1,14 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/* ft_strnstr.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dakobaya <dakobaya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                  +#+#+#+#+#+   +#+         */
+/*   Created: 2026/05/06 00:00:00 by dakobaya        #+#    #+#               */
+/*   Updated: 2026/05/06 00:00:00 by dakobaya        ###   ########.fr        */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -20,10 +30,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-//     char big[11] = "aiueoaiueo";
-//     char little[11] = "oaiueo";
-//     printf("%s", ft_strnstr(big, little, 5));
-// }
