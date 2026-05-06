@@ -35,3 +35,15 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
+
+// int	main(void)
+// {
+// 	printf("%d\n", ft_atoi("42"));          // 42
+// 	printf("%d\n", ft_atoi("  -42"));       // -42
+// 	printf("%d\n", ft_atoi("+100abc"));     // 100
+// 	printf("%d\n", ft_atoi("0"));           // 0
+// 	printf("%d\n", ft_atoi(""));            // 0
+// 	printf("%d\n", ft_atoi("   "));         // 0
+// 	printf("%d\n", ft_atoi("+"));           // 0
+// 	printf("%d\n", ft_atoi("abc"));         // 0
+// }

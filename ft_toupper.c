@@ -17,3 +17,10 @@ int	ft_toupper(int c)
 		c -= 'a' - 'A';
 	return (c);
 }
+
+// int	main(void)
+// {
+// 	printf("%c\n", ft_toupper('a'));
+// 	printf("%c\n", ft_toupper('Z'));
+// 	printf("%c\n", ft_toupper('1'));
+// }

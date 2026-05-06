@@ -30,3 +30,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strnstr("hello world", "world", 11));
+// 	printf("%p\n", (void *)ft_strnstr("hello world", "world", 5));
+// 	printf("%s\n", ft_strnstr("hello", "", 5));
+// }

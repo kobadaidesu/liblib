@@ -26,3 +26,16 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
+
+// int	main(void)
+// {
+// 	char	dst[10];
+// 	size_t	ret;
+//
+// 	ret = ft_strlcpy(dst, "hello", sizeof(dst));
+// 	printf("dst: %s  ret: %zu\n", dst, ret);
+// 	ret = ft_strlcpy(dst, "hello", 3);
+// 	printf("size<len: dst=%s ret=%zu\n", dst, ret);
+// 	ret = ft_strlcpy(dst, "hello", 0);
+// 	printf("size=0: ret=%zu\n", ret);
+// }

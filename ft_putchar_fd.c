@@ -15,3 +15,10 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+// int	main(void)
+// {
+// 	ft_putchar_fd('H', 1);
+// 	ft_putchar_fd('i', 1);
+// 	ft_putchar_fd('\n', 1);
+// }

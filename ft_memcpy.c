@@ -29,3 +29,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+// int	main(void)
+// {
+// 	unsigned char	src[5] = {1, 2, 3, 4, 5};
+// 	unsigned char	dst[5] = {0};
+//
+// 	ft_memcpy(dst, src, 5);
+// 	printf("%d %d %d %d %d\n", dst[0], dst[1], dst[2], dst[3], dst[4]);
+// 	ft_memcpy(dst, src, 0);
+// 	printf("n=0: %d\n", dst[0]);
+// }

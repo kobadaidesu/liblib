@@ -30,3 +30,20 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_str[i] = '\0';
 	return (new_str);
 }
+
+// static char	to_upper_c(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	if (c >= 'a' && c <= 'z')
+// 		return (c - 32);
+// 	return (c);
+// }
+//
+// int	main(void)
+// {
+// 	char	*res;
+//
+// 	res = ft_strmapi("hello", to_upper_c);
+// 	printf("%s\n", res);
+// 	free(res);
+// }

@@ -17,3 +17,10 @@ int	ft_tolower(int c)
 		c += 'a' - 'A';
 	return (c);
 }
+
+// int	main(void)
+// {
+// 	printf("%c\n", ft_tolower('A'));
+// 	printf("%c\n", ft_tolower('z'));
+// 	printf("%c\n", ft_tolower('1'));
+// }

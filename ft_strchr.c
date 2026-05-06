@@ -26,3 +26,10 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strchr("hello", 'l'));
+// 	printf("%p\n", (void *)ft_strchr("hello", 'z'));
+// 	printf("%s\n", ft_strchr("hello", '\0'));
+// }

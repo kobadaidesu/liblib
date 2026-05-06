@@ -21,3 +21,9 @@ void	ft_putstr_fd(char *s, int fd)
 		s++;
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_putstr_fd("hello\n", 1);
+// 	ft_putstr_fd("error\n", 2);
+// }

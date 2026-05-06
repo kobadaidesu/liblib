@@ -28,3 +28,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(new_str, s2, len1 + len2 + 1);
 	return (new_str);
 }
+
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strjoin("hello", " world"));
+// 	printf("%s\n", ft_strjoin("", "abc"));
+// 	printf("%p\n", (void *)ft_strjoin(NULL, "abc"));
+// }

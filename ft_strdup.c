@@ -30,3 +30,12 @@ char	*ft_strdup(const char *s)
 	ptr[i] = '\0';
 	return (ptr);
 }
+
+// int	main(void)
+// {
+// 	char	*dup;
+//
+// 	dup = ft_strdup("hello");
+// 	printf("%s\n", dup);
+// 	free(dup);
+// }

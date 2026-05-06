@@ -74,3 +74,28 @@ char	**ft_split(char const *s, char c)
 	result[i] = NULL;
 	return (result);
 }
+
+// int	main(void)
+// {
+// 	char	**res;
+// 	int		i;
+//
+// 	// 通常
+// 	res = ft_split("hello world foo", ' ');
+// 	i = 0;
+// 	while (res[i])
+// 		printf("[%s]\n", res[i++]);
+// 	printf("---\n");
+// 	// 連続デリミタ
+// 	res = ft_split(",,a,,b,,", ',');
+// 	i = 0;
+// 	while (res[i])
+// 		printf("[%s]\n", res[i++]);
+// 	printf("---\n");
+// 	// 空文字列 → res[0]==NULLのみ
+// 	res = ft_split("", ' ');
+// 	printf("empty: %s\n", res[0] ? res[0] : "NULL");
+// 	// デリミタのみ → 同様にNULLのみ
+// 	res = ft_split("   ", ' ');
+// 	printf("delimiters only: %s\n", res[0] ? res[0] : "NULL");
+// }

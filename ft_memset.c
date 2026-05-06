@@ -25,3 +25,13 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+// int	main(void)
+// {
+// 	char	buf[6] = "hello";
+//
+// 	ft_memset(buf, 'x', 3);
+// 	printf("%s\n", buf);
+// 	ft_memset(buf, 0, 5);
+// 	printf("zeroed: %d\n", buf[0]);
+// }

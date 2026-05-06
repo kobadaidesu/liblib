@@ -28,3 +28,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int	main(void)
+// {
+// 	unsigned char	a[3] = {1, 2, 3};
+// 	unsigned char	b[3] = {1, 2, 4};
+//
+// 	printf("equal:    %d\n", ft_memcmp(a, a, 3));
+// 	printf("a < b:    %d\n", ft_memcmp(a, b, 3));
+// 	printf("b > a:    %d\n", ft_memcmp(b, a, 3));
+// 	printf("n=0:      %d\n", ft_memcmp(a, b, 0));
+// }

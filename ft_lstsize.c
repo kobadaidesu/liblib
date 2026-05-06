@@ -23,3 +23,14 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
+
+// int	main(void)
+// {
+// 	t_list	*lst;
+//
+// 	lst = ft_lstnew("A");
+// 	ft_lstadd_back(&lst, ft_lstnew("B"));
+// 	ft_lstadd_back(&lst, ft_lstnew("C"));
+// 	printf("size: %d\n", ft_lstsize(lst));
+// 	printf("NULL: %d\n", ft_lstsize(NULL));
+// }

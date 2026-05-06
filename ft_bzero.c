@@ -15,3 +15,10 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
+
+// int	main(void)
+// {
+// 	char	buf[5] = {1, 2, 3, 4, 5};
+// 	ft_bzero(buf, 3);
+// 	printf("%d %d %d %d %d\n", buf[0], buf[1], buf[2], buf[3], buf[4]);
+// }

@@ -35,3 +35,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(new_str, s + start, len + 1);
 	return (new_str);
 }
+
+// int	main(void)
+// {
+// 	printf("[%s]\n", ft_substr("hello world", 6, 5));  // [world]
+// 	printf("[%s]\n", ft_substr("hello", 0, 3));        // [hel]
+// 	printf("[%s]\n", ft_substr("hello", 10, 3));       // [] start>len
+// 	printf("[%s]\n", ft_substr("hello", 0, 0));        // [] len=0
+// 	printf("[%s]\n", ft_substr("hello", 2, 100));      // [llo] len>残り
+// }

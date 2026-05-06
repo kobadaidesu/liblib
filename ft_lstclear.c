@@ -25,3 +25,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
+
+// int	main(void)
+// {
+// 	t_list	*lst;
+//
+// 	lst = ft_lstnew(ft_strdup("A"));
+// 	ft_lstadd_back(&lst, ft_lstnew(ft_strdup("B")));
+// 	ft_lstclear(&lst, free);
+// 	printf("after clear: %s\n", lst ? "not null" : "NULL");
+// }

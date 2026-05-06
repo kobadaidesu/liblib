@@ -24,3 +24,18 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+
+// static void	to_upper_i(unsigned int i, char *c)
+// {
+// 	(void)i;
+// 	if (*c >= 'a' && *c <= 'z')
+// 		*c -= 32;
+// }
+//
+// int	main(void)
+// {
+// 	char	s[] = "hello";
+//
+// 	ft_striteri(s, to_upper_i);
+// 	printf("%s\n", s);
+// }

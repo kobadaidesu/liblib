@@ -25,3 +25,24 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
+
+// static void	print_list(t_list *lst)
+// {
+// 	while (lst)
+// 	{
+// 		printf("[%s]", (char *)lst->content);
+// 		lst = lst->next;
+// 	}
+// 	printf("\n");
+// }
+//
+// int	main(void)
+// {
+// 	t_list	*lst;
+//
+// 	lst = NULL;
+// 	ft_lstadd_back(&lst, ft_lstnew("A"));
+// 	ft_lstadd_back(&lst, ft_lstnew("B"));
+// 	ft_lstadd_back(&lst, ft_lstnew("C"));
+// 	print_list(lst);
+// }

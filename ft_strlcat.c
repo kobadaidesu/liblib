@@ -33,3 +33,29 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
+
+// int	main(void)
+// {
+// 	char	dst[20];
+// 	size_t	ret;
+//
+// 	// 通常: "Hello" + " World" → "Hello World", ret=11
+// 	ft_strlcpy(dst, "Hello", sizeof(dst));
+// 	ret = ft_strlcat(dst, " World", sizeof(dst));
+// 	printf("normal:   dst=%s ret=%zu\n", dst, ret);
+//
+// 	// size=0: dst触らず、ret=src_len=6
+// 	ft_strlcpy(dst, "Hello", sizeof(dst));
+// 	ret = ft_strlcat(dst, " World", 0);
+// 	printf("size=0:   dst=%s ret=%zu\n", dst, ret);
+//
+// 	// size=1: NUL終端のみ、追記なし、ret=0+6=6
+// 	dst[0] = '\0';
+// 	ret = ft_strlcat(dst, " World", 1);
+// 	printf("size=1:   dst=%s ret=%zu\n", dst, ret);
+//
+// 	// size==dstlen: 追記不可、ret=size+srclen
+// 	ft_strlcpy(dst, "Hello", sizeof(dst));
+// 	ret = ft_strlcat(dst, " World", 5);
+// 	printf("size=dstlen: dst=%s ret=%zu\n", dst, ret);
+// }
