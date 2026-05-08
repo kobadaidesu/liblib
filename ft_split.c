@@ -75,3 +75,24 @@ char	**ft_split(char const *s, char c)
 	result[i] = NULL;
 	return (result);
 }
+
+// int	main(void)
+// {
+// 	char	**res;
+// 	int		i;
+//
+// 	res = ft_split("hello world foo", ' ');
+// 	i = 0;
+// 	while (res[i])
+// 		printf("[%s]\n", res[i++]);
+// 	printf("---\n");
+// 	res = ft_split(",,a,,b,,", ',');
+// 	i = 0;
+// 	while (res[i])
+// 		printf("[%s]\n", res[i++]);
+// 	printf("---\n");
+// 	res = ft_split("", ' ');
+// 	printf("empty: %s\n", res[0] ? res[0] : "NULL");
+// 	res = ft_split("   ", ' ');
+// 	printf("delimiters only: %s\n", res[0] ? res[0] : "NULL");
+// }

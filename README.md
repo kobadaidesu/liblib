@@ -92,5 +92,3 @@ cc your_file.c -L. -lft -o your_program
 
 - 要件に基づいたREADME.mdの構成・内容の作成
 - 標準ライブラリ関数のエッジケースの確認（例：`ft_strnstr` の境界処理、`ft_memmove` のオーバーラップ動作）
-
-C実装ファイル本体の記述にはAIを使用していません。
