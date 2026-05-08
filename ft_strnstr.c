@@ -9,6 +9,7 @@
 /*   Updated: 2026/05/06 00:00:00 by dakobaya        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
